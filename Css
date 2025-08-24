@@ -1,0 +1,115 @@
+/* Estilos generales */
+body {
+    background-color: #87ceeb; /* Un color de cielo azul */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.sol {
+    width: 100px;
+    height: 100px;
+    background-color: #ffcc00; /* Color amarillo */
+    border-radius: 50%;
+}
+
+
+.contenedor-principal {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Encabezado con efecto de transparencia */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+h1 {
+    color: #1a73e8;
+    font-size: 2.5em;
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+/* Animación y estilo para el sol */
+.contenedor-sol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+}
+
+.sol {
+    width: 50px;
+    height: 50px;
+    background-color: #ffc107;
+    border-radius: 50%;
+    box-shadow: 0 0 25px 5px #ffc107, 
+                0 0 50px 10px rgba(255, 193, 7, 0.7);
+    animation: pulsar 1.5s ease-in-out infinite alternate, girar 15s linear infinite;
+}
+
+@keyframes pulsar {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Estilos para las tarjetas de noticias con efecto hover */
+.noticia {
+    background-color: #fcfcfc;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.noticia:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.noticia h2 {
+    color: #2c3e50;
+    font-size: 1.6em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.noticia p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    color: #888;
+    border-top: 1px solid #e0e0e0;
+    font-size: 0.9em;
+}
